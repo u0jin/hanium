@@ -13,8 +13,14 @@ public class TodayMenu extends AppCompatActivity {
         setContentView(R.layout.todaymenu);
     }
     public void backBtn(View v){
+        Intent myIntent=new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(myIntent);
+    }
+
+    public void updateBtn(View v){
         Intent myIntent=new Intent(getApplicationContext(),UpdateMenu.class);
         startActivity(myIntent);
     }
+
 
 }
