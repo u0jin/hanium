@@ -24,5 +24,9 @@
 
 
     </application>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    /**
+    *외부로의 접근을 위한 인터넷 사용허가
+    */
 
 </manifest>
