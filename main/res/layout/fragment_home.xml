@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:text="홈 화면"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/goaltext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="목표 설정 공지 란"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="50dp"
+            android:text="먹은 메뉴"
+            android:textSize="10sp"
+
+            />
+
+        <RelativeLayout
+            android:id="@+id/border"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/border"
+            android:layout_gravity="center">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+            </android.support.v4.view.ViewPager>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

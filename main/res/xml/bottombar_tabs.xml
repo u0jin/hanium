@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- * 추후 BottomBar 아이콘 크기 키우고 색상 변경 *-->
+    <tabs>
+        <tab
+            id="@+id/tab_home"
+            icon="@drawable/ic_home_black_24dp"
+            title="Home"
+            barColorWhenSelected="#5D4037"
+            />
+        <tab
+            id="@+id/tab_add"
+            icon="@drawable/ic_library_add_black_24dp"
+            title="Addition"
+            barColorWhenSelected="#7B1FA2"
+            />
+        <tab
+            id="@+id/tab_goal"
+            icon="@drawable/ic_library_books_black_24dp"
+            title="Goal"
+            barColorWhenSelected="#FF5252"
+            />
+        <tab
+            id="@+id/tab_statistics"
+            icon="@drawable/ic_insert_chart_black_24dp"
+            title="Statistics"
+            barColorWhenSelected="#FF9800"
+            />
+    </tabs>
+</PreferenceScreen>
