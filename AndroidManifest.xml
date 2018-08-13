@@ -1,24 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="unithon4.com.apitest">
+    package="com.example.yesterday.yesterday">
 
-    <uses-permission android:name="android.permission.INTERNET"/>;
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>;
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
 
     <application
+        android:name=".GlobalApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+
+        <activity
+            android:name=".UI.MainActivity"
+           >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".UI.HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <!-- 로그인 , 회원 가입 -->
+        <activity android:name=".UI.LoginActivity" />
+        <activity android:name=".UI.JoinActivity" />
+        <!-- 메뉴 추가 , 수정 & 오늘,어제 먹은 메뉴 보여주는 Activity -->
+        <activity android:name=".UI.TodayMenuActivity" />
+        <activity android:name=".UI.UpdateMenuActivity" />
+        <!-- 달력 누르면 그 날 먹은 메뉴 보여주는 Activity -->
+        <activity android:name=".UI.CalendarActivity" />
+        <!-- 목표 & 다짐을 추가하기 위해 넘어가는 Activity -->
+        <activity android:name=".UI.GoalAddActivity"/>
     </application>
 
 </manifest>

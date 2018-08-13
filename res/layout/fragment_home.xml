@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.HomeFrags.HomeFragment"
+    android:layout_marginTop="24dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="?android:actionBarSize"
+        >
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Home Fragment"
+            android:layout_marginTop="10dp"
+            android:textSize="25sp"
+            android:textColor="#FFFFFF"
+            />
+
+        <TextView
+            android:id="@+id/goaltext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="목표 설정 공지 란"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            />
+
+        <Button
+            android:id="@+id/menubutton"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="80dp"
+            android:text="먹은 메뉴"
+            android:textSize="12sp"
+            android:textColor="#000000"
+            android:background="@drawable/border_button"
+            />
+
+        <RelativeLayout
+            android:id="@+id/border"
+            android:layout_width="275dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/border"
+            android:layout_gravity="center"
+            >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v4.view.ViewPager>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_root"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            >
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

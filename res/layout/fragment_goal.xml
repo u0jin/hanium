@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UI.HomeFrags.GoalFragment"
+    android:layout_marginTop="24dp">
+    <!-- 24dp -> StatusBarSize -->
+    <!-- TabLayout이 ViewPager보다 먼저 오면 클릭이 안됌 -->
+    <!-- ViewPager -> 컨테이너 역할 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+         <android.support.design.widget.TabLayout
+             android:id="@+id/tab_layout"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="?android:actionBarSize"
+             android:background="#7F1976D2"
+             app:tabSelectedTextColor="#FFFFFFFF"
+             app:tabTextAppearance="@style/TabLayoutText"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/tab_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tab_layout"
+            />
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floating_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_gravity="bottom|right"
+        android:src="@drawable/ic_add_white_24dp"
+        app:fabSize="normal"
+        />
+
+</FrameLayout>
